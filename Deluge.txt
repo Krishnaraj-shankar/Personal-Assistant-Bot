@@ -1,0 +1,301 @@
+
+response = Map();
+//for entertainment
+youtube = "www.youtube.com/";
+prime = "https://www.primevideo.com/";
+// prime_pushpa = "https://www.primevideo.com/detail/0RN8RFD7AWC58BYKD0XUER40CO/ref=dvm_src_ret_in_xx_s";
+// prime_onenight = "https://www.primevideo.com/detail/One-Night-in-Miami/0SXMGGZD0PR7O1GHO7V7TVX0EN";
+netflix = "https://www.netflix.com/";
+hotstar = "https://www.hotstar.com/in";
+tubi = "https://tubitv.com/home";
+vudu = "https://www.vudu.com/";
+//for music
+gaana = "https://gaana.com/";
+spotify = "https://open.spotify.com/";
+Amazon_music = "https://www.amazon.com/music/unlimited";
+Apple_music = "https://www.apple.com/in/apple-music/";
+wynk = "https://wynk.in/music";
+mixCloud = "https://www.mixcloud.com/";
+categories_weather = {"Chennai","London","Mumbai",""};
+categories = {"business","gaming","general","Health-and-Medical","politics","Science-and-Nature","Sport","Technology"};
+//for social media 
+Whatsapp = "https://www.whatsapp.com/";
+Facebook = "https://www.facebook.com/";
+Instagram = "https://www.instagram.com/?hl=en";
+SnapChat = "https://www.snapchat.com/";
+Twitter = "https://twitter.com/login?lang=en";
+Pinterest = "https://in.pinterest.com/";
+Telegram = "https://web.telegram.org/";
+//for foods
+uber_eats = "https://www.ubereats.com/";
+zomato = "https://www.zomato.com/";
+swiggy = "https://www.swiggy.com/";
+//for Developer 
+Github = "https://github.com/";
+LinkedIn = "https://www.linkedin.com/";
+Stackoverflow = "https://stackoverflow.com/";
+Meet = "https://meet.google.com/";
+Zoom = "https://zoom.us/";
+leetcode = "https://leetcode.com/";
+//for travel
+uber = "https://m.uber.com/";
+ola = "https://www.olacabs.com/";
+if(message.equalsIgnoreCase("HI") || message.equalsIgnoreCase("HIi") || message.containsIgnoreCase("HEY") || message.containsIgnoreCase("HELLO") || message.containsIgnoreCase("Whatsup") || message.containsIgnoreCase("ALOHA"))
+{
+	text = "Hi " + user.get("first_name") + "! How you doing? I'm providing all the things you need 😊";
+	response.put("suggestions",{"list":{{"text":"Entertainment🎬"},{"text":"Music🎶"},{"text":"Book a Cab🚗"},{"text":"Weather🌦️"},{"text":"Foods🍕"},{"text":"Social Media📱"},{"text":"News🗞️"},{"text":"Developer Tools & Products👨‍💻"},{"text":"Jokes🎭"}}});
+}
+//for Entertainment
+else if(message.containsIgnoreCase("Entertainment") || message.containsIgnoreCase("Entertainment🎬"))
+{
+	text = "Glad to hear that! 🤩 choose a platform";
+	response.put("suggestions",{"list":{{"text":"Youtube📽️"},{"text":"Hotstar✡️"},{"text":"tubi🎦"},{"text":"Vudu📺"},{"text":"Amazon Prime🍿"},{"text":"Netflix📻"}}});
+}
+else if(message.containsIgnoreCase("Youtube📽️") || message.containsIgnoreCase("Youtube"))
+{
+	text = "Click the blue link to go to youtube\n" + youtube;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Hotstar✡️") || message.containsIgnoreCase("Hotstar"))
+{
+	text = "Hot Seats😎!! Here you go\n" + hotstar;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("tubi🎦") || message.containsIgnoreCase("tubi"))
+{
+	text = "Hot Seats😎!! Here you go\n" + tubi;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("vudu📺") || message.containsIgnoreCase("vudu"))
+{
+	text = "Hot Seats😎!! Here you go\n" + vudu;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Amazon Prime🍿") || message.containsIgnoreCase("Prime") || message.containsIgnoreCase("Amazon Prime"))
+{
+	text = "Hot Seats😎!! Here you go\n" + prime;
+	response.put("text",text);
+	// 	response.put("text","Click the blue link to go to Amazon Prime " + prime);
+}
+else if(message.containsIgnoreCase("Netflix📻") || message.containsIgnoreCase("Netflix"))
+{
+	text = "Hot Seats😎!! Here you go\n" + netflix;
+	response.put("text",text);
+}
+//for Music
+else if(message.equalsIgnoreCase("Music") || message.equalsIgnoreCase("Music🎶"))
+{
+	text = "Chill your mind😁 choose a platform";
+	response.put("suggestions",{"list":{{"text":"Gaana🎸"},{"text":"Wynk🎹"},{"text":"Apple Music🎚️"},{"text":"MixCloud🌫️"},{"text":"Amazon Music🎷"},{"text":"Spotify💚"}}});
+}
+else if(message.containsIgnoreCase("Gaana🎸") || message.containsIgnoreCase("Gaana"))
+{
+	text = "Be Ready with Headphone!🎧🤩\n" + gaana;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Wynk🎹") || message.containsIgnoreCase("Wynk"))
+{
+	text = "Be Ready with Headphone!🎧🤩\n" + wynk;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("spotify💚") || message.containsIgnoreCase("Spotify"))
+{
+	text = "Be Ready with Headphone!🎧🤩\n" + spotify;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Apple Music🎚️") || message.containsIgnoreCase("Apple Music"))
+{
+	text = "Be Ready with Headphone!🎧🤩\n" + Apple_music;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("MixCloud🌫️") || message.containsIgnoreCase("MixCloud"))
+{
+	text = "Be Ready with Headphone!🎧🤩\n" + mixCloud;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Amazon Music🎷") || message.containsIgnoreCase("Amazon Music"))
+{
+	text = "Be Ready with Headphone!🎧🤩\n" + Amazon_music;
+	response.put("text",text);
+}
+//for news
+else if(message.containsIgnoreCase("News") || message.containsIgnoreCase(" BREAKING NEWS") || message.containsIgnoreCase("News🗞️") || message.containsIgnoreCase("Headings"))
+{
+	list = List();
+	for each  category in categories
+	{
+		entry = Map();
+		entry.put("text",category);
+		list.add(entry);
+	}
+	suggestion = Map();
+	suggestion.put("list",list);
+	text = "Hey " + user.get("first_name") + " ,choose one option from the list! I can help you with these. :smile:";
+	response.put("text",text);
+	response.put("suggestions",suggestion);
+}
+else if(categories.containsIgnoreCase(message))
+{
+	url = getUrl("https://newsapi.org/v2/top-headlines?category=" + message.toLowerCase() + "&language=en&apiKey=<APIKEY>");
+	newslist = url.get("articles");
+	rows = List();
+	count = 0;
+	for each  news in newslist
+	{
+		count = count + 1;
+		row = Map();
+		row.put("Headline",news.get("title"));
+		row.put("View Link","[Read More](" + news.get("url") + ")");
+		if(count <= 5)
+		{
+			rows.add(row);
+		}
+	}
+	return {"text":"Hello! Here's the top 5 news in the " + message + " category!","card":{"theme":"modern-inline","title":"Hi " + user.get("first_name") + " :smile:"},"slides":{{"type":"table","data":{"headers":{"Headline","View Link"},"rows":rows}}}};
+}
+//Social Media
+else if(message.equalsIgnoreCase("Social Media") || message.equalsIgnoreCase("Social Media📱"))
+{
+	text = "Glad to hear that! :smile: choose a platform";
+	response.put("suggestions",{"list":{{"text":"Whatsapp"},{"text":"Instagram"},{"text":"Twitter"},{"text":"Facebook"},{"text":"SnapChat"},{"text":"Pinterest"},{"text":"Telegram"}}});
+}
+else if(message.containsIgnoreCase("Whatsapp"))
+{
+	text = "Happy Chat🤩!\n" + Whatsapp;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Facebook"))
+{
+	text = "Like some Post😉!\n" + Facebook;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Twitter"))
+{
+	text = "Here you go😁!\n" + Twitter;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Snapchat"))
+{
+	text = "Here you go😎!\n" + SnapChat;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Pinterest"))
+{
+	text = "Here you go😁!\n" + Pinterest;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Instagram"))
+{
+	text = "Do some reels😎!\n" + Instagram;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Telegram"))
+{
+	text = "Here you go😉!\n" + Telegram;
+	response.put("text",text);
+}
+//for Foods
+else if(message.equalsIgnoreCase("Foods🍕") || message.equalsIgnoreCase("Foods") || message.equalsIgnoreCase("Food"))
+{
+	text = "Glad to hear that! :smile: choose a platform";
+	response.put("suggestions",{"list":{{"text":"Uber Eats🍔"},{"text":"Zomato🥪"},{"text":"Swiggy🍟"}}});
+}
+else if(message.containsIgnoreCase("Uber Eats🍔") || message.containsIgnoreCase("Uber Eats"))
+{
+	text = "Good Choice😁..!\nEast or West Food is best🍕\n" + uber_eats;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Zomato🥪") || message.containsIgnoreCase("Zomato"))
+{
+	text = "Good Choice😁..!\nEast or West Food is best🍕\n" + zomato;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Swiggy🍟") || message.containsIgnoreCase("Swiggy"))
+{
+	text = "Good Choice😁..!\nEast or West Food is best🍕\n" + swiggy;
+	response.put("text",text);
+}
+//for Developer Tools
+else if(message.equalsIgnoreCase("Developer Tools & Products") || message.equalsIgnoreCase("Developer Tools & Products👨‍💻") || message.equalsIgnoreCase("Developer Tools") || message.equalsIgnoreCase("Developer") || message.equalsIgnoreCase("Developer Products") || message.equalsIgnoreCase("Developer Product"))
+{
+	text = "Glad to hear that! :smile: choose a platform";
+	response.put("suggestions",{"list":{{"text":"Github🐈‍⬛"},{"text":"Stackoverflow📚"},{"text":"Leetcode🧑‍💻"},{"text":"LinkedIn📱"},{"text":"Google Meet"}}});
+}
+else if(message.containsIgnoreCase("Github🐈‍⬛") || message.containsIgnoreCase("Github"))
+{
+	text = "Explore Some Good Projects in Github🤩\n" + Github;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Stackoverflow📚") || message.containsIgnoreCase("Stackoverflow"))
+{
+	text = "Got doubts in your Project ask here!!\n" + Stackoverflow;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Leetcode🧑‍💻") || message.containsIgnoreCase("Leetcode"))
+{
+	text = "Practice your coding skills here!👩‍💻\n" + leetcode;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Google Meet") || message.containsIgnoreCase("Google Meet") || message.containsIgnoreCase("Meet"))
+{
+	text = "Want to Schedule a meet ?Click here\n" + Meet;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("LinkedIn📱") || message.containsIgnoreCase("LinkedIn"))
+{
+	text = "Connect with global developers👩‍💻 ?Click here\n" + LinkedIn;
+	response.put("text",text);
+}
+//for jokess
+else if(message.equalsIgnoreCase("Jokes") || message.equalsIgnoreCase("Jokes🎭") || message.equalsIgnoreCase("Joke"))
+{
+	url = getUrl("https://v2.jokeapi.dev/joke/Programming,Christmas?blacklistFlags=nsfw,racist,sexist,explicit&type=twopart");
+	text = url.get("setup") + url.get("delivery") + "😂" + "\nDon't love the joke.Try Again😉";
+	response.put("text",text);
+}
+//for travel
+else if(message.containsIgnoreCase("Book a Cab🚗") || message.containsIgnoreCase("book a cab") || message.containsIgnoreCase("cab booking") || message.containsIgnoreCase("car booking") || message.containsIgnoreCase("auto booking"))
+{
+	text = "Enjoy your ride!!🏎️";
+	response.put("suggestions",{"list":{{"text":"Ola🛺"},{"text":"Uber🚖"}}});
+}
+else if(message.containsIgnoreCase("Uber🚖") || message.containsIgnoreCase("Uber"))
+{
+	text = "Happy Journey🤩\n" + uber;
+	response.put("text",text);
+}
+else if(message.containsIgnoreCase("Ola🛺") || message.containsIgnoreCase("Ola"))
+{
+	text = "Happy Journey🤩\n" + ola;
+	response.put("text",text);
+}
+//for weather
+else if(message.containsIgnoreCase("Weather🌦️") || message.containsIgnoreCase("Weather"))
+{
+	text = "Enter the city of your wish";
+	response.put("text",text);
+}
+else if(message)
+{
+	url = getUrl("https://api.openweathermap.org/data/2.5/weather?q=" + message.toLowerCase() + "&units=metric&appid=<APIKEY>");
+	//text = url.get("coord");
+	valid = url.get("message");
+	if(valid == "city not found")
+	{
+		text = "Enter Valid data or Try saying 'hi' , 'Hello'😊";
+		response.put("text",text);
+	}
+	else
+	{
+		text = "Temperature " + url.get("main").get("temp") + "\n" + url.get("weather").get("0").get("description") + "🌨️";
+		response.put("text",text);
+	}
+}
+//else case
+// else
+// {
+// 	text = "Could you please spell it correctly.Try typing hi,hey,hello,Aloha,whatsup";
+// 	response.put("text",text);
+// }
+response.put("text",text);
+return response;
